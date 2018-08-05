@@ -1,0 +1,215 @@
+
+*{box-sizing:border-box;font-size: 18px;}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,input,select,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+		font-family: 'NanumGothic', 'dl', '맑은 고딕',"돋움", Verdana,sans-serif;
+	    letter-spacing: -0.5px;
+	    vertical-align: baseline;
+	}
+	
+/* HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {	display: block;}
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+
+  IE8 (and lower) requires a shiv:
+  http://ejohn.org/blog/html5-shiv
+*/
+
+
+/* html Reset
+----------------------------------------------------------------------------------------------------*/
+
+ol,ul,li { list-style: none }
+html { height: 100% }
+body {
+	    line-height: normal;
+	    font-style: normal;
+	    font-size: 18px;
+	    color: #888;
+	    height: 100%;
+	    letter-spacing: -0.5px;
+	    text-rendering: optimizeLegibility;
+	    background-color: #fff;
+
+	}
+
+/* bold Reset
+----------------------------------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 { font-weight:normal;} 
+b,strong {
+	font-weight: bold;}
+	
+/* img Reset
+----------------------------------------------------------------------------------------------------*/
+
+image, img {color: transparent;font-size: 0;border:0;vertical-align: middle;
+	/*
+	For IE.
+	http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+	*/
+	-ms-interpolation-mode: bicubic;
+}
+
+/* list Reset
+----------------------------------------------------------------------------------------------------*/
+
+li {
+/*For IE6 + IE7.*/
+display: list-item;list-style: none;
+}
+
+/* board Reset
+----------------------------------------------------------------------------------------------------*/
+
+table {border-collapse: collapse;border-spacing: 0;}
+th,td,caption {font-weight: normal;vertical-align: top;text-align: left;}
+q {quotes: none;}
+q:before,q:after {content: '';content: none;}
+sub,sup,small {font-size: 75%;}
+sub,sup {line-height: 0;position: relative;vertical-align: baseline;}
+sub {bottom: -0.25em;}
+sup {top: -0.5em;}
+svg {overflow: hidden;} /* For IE9.*/
+
+
+/* link Reset
+----------------------------------------------------------------------------------------------------*/
+
+
+a{color:inherit;text-decoration:none}
+a:active, a:hover{text-decoration:none; color: #666}
+a:link, a:visited {text-decoration:none}
+
+
+input[type=button],
+input[type=submit],
+button{-webkit-appearance:none;cursor:pointer;}
+*:focus { outline:none;}
+input [type="checkbox"] {width:20px;display: inline-block;}
+input [type="radio"]{display: inline-block; width: 20px; height: 25px;  line-height: 25px; z-index: 10}
+
+/* form Reset
+----------------------------------------------------------------------------------------------------*/
+
+legend {display: none;}
+
+fieldset {border: 0 none;margin: 0px;padding: 0px;}
+input {font-size: 100%;vertical-align: middle;border: 1px solid #e4e4e4;}
+
+textarea {font-size: 100%;padding: 0;border: 1px solid #696969;}
+.input{border: #ccc 1px solid;vertical-align: middle;font-size: 14px ;height: 20px; padding:10px;}
+.input_border{border: #ccc 1px solid; vertical-align: middle;font-size: 14px ; height: 30px; padding:8px;}
+
+
+/* etc Reset
+----------------------------------------------------------------------------------------------------*/
+
+address, caption, cite, code, dfn, em, th, var {font-style : normal;font-weight : normal;}
+br { letter-spacing: 0;}
+
+
+.clfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }	
+.clfix { display: inline-block; }	
+.clfix { display: block;}
+.inline{ display: inline-block; }
+
+.fl { float: left; _display: inline}
+.fr { float: right; }
+.tc { text-align: center}
+.tct20 { text-align: center;margin-top: 10px}
+.clearing { clear: both; }
+.hiding { display: none; }
+.show { display: block ; }
+.center{margin:0 auto; text-align: center;}
+.left{text-align: left}
+.right{text-align: right}
+
+.blind {position:absolute; top:0; left:0;width:0px; height:0px; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+select{height:20px;}
+
+.none{border:none; background: none}
+.spanb{color: #9a9a9a;font-size: 11px}
+.ellip {max-height:24px;/* height:24px; */display:block;display:-webkit-box;-webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; white-space: nowrap; }
+
+
+/*---------------------------------- Skip Menu ----------------------------------*/
+.skipMenu {position:fixed; top:0; left:0; width:100%; z-index:99999;}
+.skipMenu a{height:1px; color:transparent; display:block; color:#333; font-size: 0}
+.skipMenu a:focus, 
+.skipMenu a:active {height:auto; padding:7px 0 10px; background-color:#000; color:#fff; text-decoration:none; font-weight:bold; text-align:center; _float:left; font-size:16px;}
+	
+/*---------------------------------- COMMON ----------------------------------*/
+
+.c_black{color: #000000;}
+.f18{font-size: 18px !important;}
+
+.block{display: block}
+.mt100{margin-top:100px !important}
+.mt90{margin-top:90px !important}
+.mt80{margin-top:80px !important}
+.mt70{margin-top:70px !important}
+.mt60{margin-top:60px !important}
+.mt50{margin-top:50px !important}
+.mt40{margin-top:40px !important}
+.mt30{margin-top:30px !important}
+.mt20{margin-top:20px !important}
+.mt10{margin-top:10px !important}
+.mt5{margin-top:5px !important}
+.mt0{margin-top:0px !important}
+
+.mb100{margin-bottom:100px !important;}
+.mb90{margin-bottom:90px !important;}
+.mb80{margin-bottom:80px !important;}
+.mb70{margin-bottom:70px !important;}
+.mb60{margin-bottom:60px !important;}
+.mb50{margin-bottom:50px !important;}
+.mb40{margin-bottom:40px !important;}
+.mb30{margin-bottom:30px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb5{margin-bottom:5px !important;}
+.mb0{margin-bottom:0px !important;;}
+
+
+.pt80{padding-top: 80px !important;}
+.pt70{padding-top: 70px !important;}
+.pt50{padding-top: 50px !important;}
+.pt40{padding-top: 40px !important;}
+.pt30{padding-top: 30px !important;}
+.pt20{padding-top: 20px !important;}
+.pt10{padding-top: 10px !important;}
+.pb80{padding-bottom: 80px !important;}
+.pb70{padding-bottom: 70px !important;}
+.pb50{padding-bottom: 50px !important;}
+.pb40{padding-bottom: 40px !important;}
+.pb30{padding-bottom: 30px !important;}
+.pb20{padding-bottom: 20px !important;}
+.pb10{padding-bottom: 10px !important;}
+.pl10{padding-left: 10px !important;}
+.pl20{padding-left: 20px !important;}
+.pl30{padding-left: 30px !important;}
+.pl50{padding-left: 50px !important;}
+.pl90{padding-left: 90px !important;}
+.ml10{margin-left: 10px !important;}
+.ml20{margin-left: 20px !important;}
+.ml30{margin-left: 30px !important;}
+.ml50{margin-left: 50px !important;}
+.ml60{margin-left: 60px !important;}
+.ml70{margin-left: 70px !important;}
+.ml80{margin-left: 80px !important;}
+.ml90{margin-left: 90px !important;}
+
+.mr10{margin-right: 10px !important;}
+.mr40{margin-right: 40px !important;}
+.mr50{margin-right: 50px !important;}
+
+.txc-image{max-width:100%}
+

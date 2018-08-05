@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="Todo list">
+	<title>Todo list</title>
+	<style>
+		*{margin:0;padding:0;}
+			.wrap{overflow-y:auto;overflow-x:hidden;border:1px solid #666;background:#eee;}
+			.list{background:#eee;}
+			.list li{position:relative;height:80px;border-bottom:1px solid #ddd;background:#eee;}
+			.list li a{touch-action:none;position:absolute;width:100%;left:0;top:0;bottom:0;padding:10px 20px;overflow:hidden;box-sizing:border-box;background:#fff;}
+			.list li a .left{float:left;margin:20px 0 0 0;font-size:18px;font-weight:600;color:#333;}
+			.list li a .right{float:right;margin:20px 0 0 0;font-size:14px;color:#999;}
+	</style>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+		var myX;
+		var currentPos;
+
+		$(document).on("touchstart mousedown", ".list li a", function(e){
+			//console.log(e);
+			//console.log("시작");
+			currentPos = 0; //이동거리 초기화
+			var selectPos1 = e.pageX || e.originalEvent.touches[0].pageX; //x좌표
+			myX = selectPos1;
+			$(e.currentTarget).css({"left":"0"});
+			return false;
+		});
+
+		$(document).on("touchmove mousemove", ".list li a", function(e){
+			if(e.pageX){
+				//mousemove는 마우스를 잡고 움직이든 안잡고 움직이든 동작한다. 화면 위를 지나는 모든 동작이 mousemove
+				//마우스를 잡고 움직이는 순간은 1, 마우스를 놓고 움직이는 순간은 0
+				console.log(e.which);
+				if (e.which !== 1) return;
+			}
+			var selectPos2 = e.pageX || e.originalEvent.touches[0].pageX;
+			currentPos = selectPos2 - myX;
+			$(e.currentTarget).css({"left" : currentPos + "px"});
+			//console.log("진행중>>>>" + currentPos);
+		});
+
+		$(document).on("touchend mouseup", ".list li a", function(e){
+			//console.log("끝");
+			var bodyWid = -($("body").width());
+			if(currentPos < -140){
+				$(e.currentTarget).animate({"left" : bodyWid + "px"}, 500, function(){
+					$(e.currentTarget).parent().remove();
+				});
+			}else{
+				$(e.currentTarget).animate({"left" : "0px"}, 500);
+			}
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="wrap">
+		<ul class="list">
+			<li>
+				<a href="#">
+					<span class="left">홍길동1</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동2</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동3</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동4</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동5</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동6</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동7</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동8</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동9</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="left">홍길동10</span>
+					<span class="right">2018-07-18</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
